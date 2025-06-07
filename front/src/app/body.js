@@ -119,7 +119,6 @@ export default function Body() {
                         color={theme.colors.onSurface}>
                             O código da prova é fornecido pelo professor.
                     </TextN>
-    
                     
                     
                     <ButtonType1 
@@ -127,7 +126,7 @@ export default function Body() {
                         loadingText="Aguarde..."
                         disabled = {disableButtonClick} 
                         onClick={toggleTheme} mt={6}>
-                            Mudar Tema
+                            Iniciar Prova
                     </ButtonType1>
                 </Flex>
         </Flex>

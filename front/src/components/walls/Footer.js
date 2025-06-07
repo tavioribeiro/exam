@@ -1,15 +1,17 @@
 "use client";
 
 import React from 'react';
-import { Box, Flex, Text } from '@chakra-ui/react';
+import { Box, Flex, Text, CloseButton} from '@chakra-ui/react';
+import { CiLight, CiDark } from "react-icons/ci";
+
 
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Footer() {
-  const { theme } = useTheme();
+  const { theme, currentThemeName, toggleTheme } = useTheme();
 
   const data = {
-    nomeEmpresa: "Ascov",
+    nomeEmpresa: "",
     desenvolvedor: "Otávio Augusto",
     anoAtual: new Date().getFullYear(),
   };
@@ -91,10 +93,17 @@ export default function Footer() {
       </Flex>
 
       {/* Seção Direita: Placeholder para equilíbrio visual */}
-      <Box
-        flex={{ base: 'unset', lg: 1 }}
-        display={{ base: 'none', lg: 'block' }}
-      />
+      <Flex
+      justifyContent="center"
+      alignItems="center"
+        flex={{ base: 'unset', lg: 1 }}>
+            {currentThemeName === 'dark' ? (
+              <CiLight size={24} color={theme.colors.onSurface} onClick={toggleTheme} />
+            ) : (
+              <CiDark size={24} color={theme.colors.onSurface} onClick={toggleTheme} />
+            )}
+        </Flex>
+
     </Box>
   );
 }

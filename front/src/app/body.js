@@ -18,6 +18,9 @@ export default function Body() {
     const [value, setValue] = useState('');
     const [pureCode, setPureCode] = useState('');
 
+    const [disableButtonClick, setDisableButtonClick] = useState(true);
+    const [showButton, setShowButton] = useState(false);
+
     const handleChange = (event) => {
         const rawValue = event.target.value;
         
@@ -41,8 +44,17 @@ export default function Body() {
             }
         }
 
+
         setValue(formattedValue);
         setPureCode(limitedChars);
+
+
+        if( limitedChars.length === 6) {
+            setDisableButtonClick(false);
+        }
+        else {
+            setDisableButtonClick(true);
+        }
     };
 
 
@@ -110,8 +122,12 @@ export default function Body() {
     
                     
                     
-                    <ButtonType1 onClick={toggleTheme} mt={6}>
-                        Mudar Tema
+                    <ButtonType1 
+                        loading = {showButton}
+                        loadingText="Aguarde..."
+                        disabled = {disableButtonClick} 
+                        onClick={toggleTheme} mt={6}>
+                            Mudar Tema
                     </ButtonType1>
                 </Flex>
         </Flex>

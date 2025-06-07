@@ -1,0 +1,55 @@
+# -----------------------------------------------------------
+# REGRAS PARA O PROJETO FRONTEND (Next.js)
+# Localização: ~/exam/front/
+# -----------------------------------------------------------
+/front/node_modules
+/front/.pnp
+/front/.pnp.*
+/front/.yarn/*
+!/front/.yarn/patches
+!/front/.yarn/plugins
+!/front/.yarn/releases
+!/front/.yarn/versions
+/front/coverage
+/front/.next/
+/front/out/
+/front/build
+/front/.DS_Store
+/front/*.pem
+/front/npm-debug.log*
+/front/yarn-debug.log*
+/front/yarn-error.log*
+/front/.pnpm-debug.log*
+/front/.env*
+/front/.vercel
+/front/*.tsbuildinfo
+/front/next-env.d.ts
+
+# -----------------------------------------------------------
+# REGRAS PARA O PROJETO BACKEND
+# Localização: ~/exam/back/
+# (Exemplo: Node.js, Express, NestJS, etc.)
+# -----------------------------------------------------------
+/back/node_modules/
+/back/dist/         # Pasta de compilação comum (ex: TypeScript)
+/back/build/        # Outra pasta de build comum
+/back/npm-debug.log*
+/back/yarn-debug.log*
+/back/yarn-error.log*
+/back/.pnpm-debug.log*
+/back/.env*         # Arquivos de variáveis de ambiente do backend
+/back/.DS_Store
+/back/*.pem         # Se houver arquivos .pem específicos do backend
+/back/*.log         # Qualquer arquivo .log dentro da pasta back/
+/back/.vscode/      # Configurações do VS Code específicas do backend
+
+# -----------------------------------------------------------
+# REGRAS GLOBAIS (se houver arquivos para ignorar na raiz ~/exam/)
+# Esta seção pode ser omitida se não houver nada a ignorar
+# diretamente na raiz de ~/exam/
+# -----------------------------------------------------------
+# .DS_Store
+# npm-debug.log*
+# yarn-debug.log*
+# .env.local         # Exemplo: se houver um .env.local direto na raiz exam/
+# .vscode/           # Se quiser ignorar .vscode/ na raiz exam/

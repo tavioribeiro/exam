@@ -11,13 +11,13 @@ export default function ButtonType1 ({ children, ...rest }){
 
     return (
         <Button
-        bg={theme.colors.primary} 
-        color={theme.colors.onPrimary}
-        borderRadius="50px"
-        size="sm" 
-        {...rest} 
-        >
-        {children}
+            bg={theme.colors.primary} 
+            color={theme.colors.onPrimary}
+            borderRadius="50px"
+            size="sm" 
+            {...rest} 
+            >
+            {children}
         </Button>
     );
 };

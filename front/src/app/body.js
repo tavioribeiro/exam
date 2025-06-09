@@ -5,8 +5,9 @@ import { Flex, Text, Spacer, Box } from '@chakra-ui/react';
 
 import { useTheme } from '@/context/ThemeContext';
 
+import TextT from "@/components/bricks/TextT";
 import TextP from "@/components/bricks/TextP";
-import TextS from '@/components/bricks/TextS';
+import TextST from '@/components/bricks/TextST';
 import InputType1 from '@/components/bricks/InputType1';
 import TextN from '@/components/bricks/TextN';
 import ButtonType1 from "@/components/bricks/ButtonType1";
@@ -87,14 +88,14 @@ export default function Body() {
                 align="center"
                 justify="center"
                 w={["95%", "70%", "40%"]}
-                padding={20}
+                padding={["20px", "30px", "40px"]}
                 bg={theme.colors.surface}
                 borderRadius="30px"
                 color={theme.colors.onSurface}>
 
-                    <TextS color={theme.colors.onSurface}>
-                        {dayPeriod}, {studentName || "Aluno"}! Bem-vindo ao Exam.
-                    </TextS>
+                    <TextT color={theme.colors.onSurface}>
+                        Bem-vindo ao Exam.
+                    </TextT>
 
                 
                     <TextP

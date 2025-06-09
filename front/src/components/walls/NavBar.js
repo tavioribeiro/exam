@@ -2,6 +2,8 @@
 
 import React from 'react';
 import { Flex, Text, Spacer, Box } from '@chakra-ui/react';
+import { Button, Input, Popover, Portal } from "@chakra-ui/react"
+import IconButtonType1 from '../bricks/IconButtonType1';
 import { useTheme } from '@/context/ThemeContext';
 
 export default function Navbar() {
@@ -34,7 +36,29 @@ export default function Navbar() {
             </Box>
       <Spacer /> 
       <Box>
+        <Popover.Root>
+          <Popover.Trigger asChild>
+            <IconButtonType1 aria-label="Naruto Form">
+              <Text fontSize="sm" color={theme.colors.onPrimary}>N</Text>
+            </IconButtonType1>
+          </Popover.Trigger>
+          <Portal >
+            <Popover.Positioner>
 
+              <Popover.Content borderRadius="15px" css={{ "--popover-bg": theme.colors.onSurface }}>
+                <Popover.Arrow />
+                <Popover.Body>
+                  <Popover.Title 
+                    fontFamily="'Inter Variable', sans-serif" 
+                    fontWeight="medium">
+                    Fazer Login
+                  </Popover.Title>
+                  
+                </Popover.Body>
+              </Popover.Content>
+            </Popover.Positioner>
+          </Portal>
+        </Popover.Root>
       </Box>
     </Flex>
   );

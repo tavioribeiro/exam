@@ -6,14 +6,14 @@ import { useTheme } from '@/context/ThemeContext';
 import '@fontsource-variable/inter';
 
 
-export default function TextS({ children, ...rest }) {
+export default function TextT({ children, ...rest }) {
     const { theme } = useTheme();
 
     return (
         <Text
-            fontSize="24px"
+            fontSize="30px"
             fontFamily="'Inter Variable', sans-serif"
-            fontWeight="600"
+            fontWeight="700"
             color={theme.colors.onSecondary}
             {...rest}
         >

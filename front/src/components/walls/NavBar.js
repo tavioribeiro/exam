@@ -2,9 +2,12 @@
 
 import React from 'react';
 import { Flex, Text, Spacer, Box } from '@chakra-ui/react';
-import { Button, Input, Popover, Portal } from "@chakra-ui/react"
+import { Button, Field, Input, Popover, Portal } from "@chakra-ui/react"
 import IconButtonType1 from '../bricks/IconButtonType1';
+import TextP from '../bricks/TextP';
+import TextN from '../bricks/TextN';
 import { useTheme } from '@/context/ThemeContext';
+import InputType1 from '../bricks/InputType1';
 
 export default function Navbar() {
   const { theme } = useTheme();
@@ -50,9 +53,84 @@ export default function Navbar() {
                 <Popover.Body>
                   <Popover.Title 
                     fontFamily="'Inter Variable', sans-serif" 
-                    fontWeight="medium">
+                    color={theme.colors.surface}
+                    fontSize="16px"
+                    textAlign="center"
+                    fontWeight="600">
                     Fazer Login
                   </Popover.Title>
+                  
+
+                  <TextP
+                    color={theme.colors.surface}
+                    mt={6}
+                    fontSize="14px">
+                      Nome de usuário:
+                  </TextP>
+
+                  <Input
+                    mt={2}
+                    size="sm"
+                    fontSize="14px"
+                    w="100%"
+                    borderRadius="10px"
+                    color={theme.colors.surface}
+                    bg={theme.colors.onSurface}
+                    borderColor={theme.colors.surface}
+                    placeholder="Digite seu nome de usuário"
+                    _placeholder={{
+                      color: theme.colors.surface,  
+                      opacity: 1                      
+                    }}
+                  focusVisibleRing="outside"                // ou 'inside' / 'mixed'
+  focusRingColor="blue.400"                 // cor do anel de foco
+  focusRingWidth="2px"                      // largura do anel
+  focusRingStyle="solid"                    // estilo do anel
+                  />
+
+                    <TextN
+                      mt={2}
+                      color={theme.colors.onSurface}>
+                        
+                    </TextN>
+
+
+
+
+
+
+
+
+
+                    <TextP
+                    color={theme.colors.surface}
+                    mt={6}
+                    fontSize="14px">
+                      Senha:
+                  </TextP>
+
+                  <Input
+                    mt={2}
+                    size="sm"
+                    fontSize="14px"
+                    w="100%"
+                    borderRadius="10px"
+                    color={theme.colors.surface}
+                    bg={theme.colors.onSurface}
+                    borderColor={theme.colors.surface}
+                    placeholder="Digite sua senha"
+                    _placeholder={{
+                      color: theme.colors.surface,  
+                      opacity: 1                      
+                    }}
+                    
+                  />
+
+                    <TextN
+                      mt={2}
+                      color={theme.colors.onSurface}>
+                        
+                    </TextN>
                   
                 </Popover.Body>
               </Popover.Content>
